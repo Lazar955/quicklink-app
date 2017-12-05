@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+  <div padding text-center>
+    <h3>Request verification token</h3>
+  </div>
+
+  <div padding text-center>
+    <button ion-button secondary (click)="requestToken()">Request token</button>
+  </div>
+
+  <div padding text-center>
+    <h2>{{token}}</h2>
+  </div>
+
+<div padding text-center *ngIf="error != ''">{{error}}</div>
+
+</ion-content>
