@@ -31,7 +31,14 @@ export class LoginPage {
      this.navCtrl.setRoot(HomePage );
     }, err => {
       console.log(err);
-      this.error = err;
+      let e ;
+      if(JSON.parse((err as any)._body) &&  JSON.parse((err as any)._body).messages){
+        e = JSON.parse((err as any)._body).messages
+      }else{
+        e = err
+      }
+
+      this.error = e;
     })
   }
 

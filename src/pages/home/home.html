@@ -13,7 +13,11 @@
   </div>
 
   <div padding text-center>
-    <button ion-button secondary (click)="requestToken()">Request token</button>
+    <!-- <button ion-button secondary (click)="requestToken()">Request token</button> -->
+    <button ion-button outline icon-start (click)="requestToken()">
+        <ion-icon name='refresh' is-active="false"></ion-icon>
+        Request token
+      </button>
   </div>
 
   <div padding text-center>

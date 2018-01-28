@@ -24,7 +24,8 @@ export class IpaPage {
 
   setIP() {
     console.log(this.ip.trim())
-    localStorage.setItem('ip', this.ip.trim());
+    localStorage.setItem('ip', "http://"+this.ip.trim()+"/");
+    console.log(this.ip)
     this.navCtrl.setRoot(LoginPage);
   }
 }
